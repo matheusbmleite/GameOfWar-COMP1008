@@ -65,6 +65,12 @@ public class GameOfWar {
         Card player1Card = this.player1Hand.remove(0);
         Card player2Card = this.player2Hand.remove(0);
         
+        //inserting some output to see the game happening
+        System.out.printf("Player 1: %s, cards in hand: %d ", player1Card, 
+                this.player1Hand.size());
+        System.out.printf("\tPlayer 2: %s, cards in hand: %d%n", player2Card, 
+                this.player2Hand.size());
+        
         if(player1Card.getFaceValue() > player2Card.getFaceValue()) {
             this.player1Hand.add(player1Card);
             this.player1Hand.add(player2Card);
@@ -108,6 +114,14 @@ public class GameOfWar {
         warPile.add(this.player2Hand.remove(0));
         warPile.add(this.player2Hand.remove(0));
         Card player2Card = this.player2Hand.remove(0);
+        
+        //inserting some output to see the game happening
+        System.out.printf("%n%n================= WAR !!!! %n");
+        System.out.printf("Player 1: %s, cards in hand: %d ", player1Card, 
+                this.player1Hand.size());
+        System.out.printf("\tPlayer 2: %s, cards in hand: %d%n", player2Card, 
+                this.player2Hand.size());
+        System.out.printf("========================== %n");
         
         //check for player1 to win
         if(player1Card.getFaceValue() > player2Card.getFaceValue()) {
